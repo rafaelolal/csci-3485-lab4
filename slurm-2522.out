@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/home/ralmeida/Downloads/csci-3485-lab4/main.py", line 10, in <module>
-    from torchsummary import summary
-ModuleNotFoundError: No module named 'torchsummary'
