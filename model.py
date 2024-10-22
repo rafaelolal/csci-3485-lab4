@@ -28,22 +28,17 @@ class Model:
         for param in self.model.parameters():
             param.requires_grad = False
 
-        # find and replace the last layer
-        last_layer = None
-        last_name = ""
-        for name, module in self.model.named_modules():
-            if isinstance(module, nn.Linear):
-                last_layer = module
-                last_name = name
+        # change last layer
+        if hasattr(self.model, "classifier"):
+            in_features = self.model.classifier[-1].in_features
+            self.model.classifier[-1] = nn.Linear(in_features, self.classes)
 
-        if last_layer is not None:
-            in_features = last_layer.in_features
-            new_layer = nn.Linear(in_features, self.classes)
-            setattr(self.model, last_name, new_layer)
+        elif hasattr(self.model, "fc"):
+            in_features = self.model.fc.in_features
+            self.model.fc = nn.Linear(in_features, self.classes)
 
-        # ensure the new layer's parameters require gradients
-        for param in new_layer.parameters():
-            param.requires_grad = True
+        else:
+            raise ValueError("Model architecture not supported")
 
         # get data loaders with correct transformations
         # TODO: change batch size

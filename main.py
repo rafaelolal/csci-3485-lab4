@@ -46,7 +46,10 @@ def time_it(f):
 
 
 MODELS = {
+    "resnet18": resnet18,
+    "resnet34": resnet34,
     "vgg11_bn": vgg11_bn,
+    "vgg13_bn": vgg13_bn,
     "resnet18": resnet18,
     "resnet34": resnet34,
     "vgg13_bn": vgg13_bn,
@@ -66,7 +69,7 @@ for name in MODELS:
     # TODO: change the number of epochs below
     # TODO: change the learning rate
     training_time, info = time_it(model.train)(
-        device=device, max_epochs=20, min_delta=0, lr=1e-5
+        device=device, max_epochs=20, min_delta=0, lr=1e-3
     )
     accuracy = model.test(device=device)
 

@@ -5,7 +5,6 @@ Manages the data for the experiments.
 from torch import Tensor, tensor
 from torch.utils.data import DataLoader, Dataset
 from torchvision.datasets import CIFAR10
-from torchvision.transforms import Compose, ToTensor
 
 
 class CIFAR10Dataset(Dataset):
