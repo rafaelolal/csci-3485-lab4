@@ -67,7 +67,7 @@ for name in MODELS:
         WEIGHTS[name].IMAGENET1K_V1,
         classes=10,
         batch_size=32,
-        data_size=100,
+        data_size=-1,
     )
     training_time, info = time_it(model.train)(
         device=device, max_epochs=5, min_delta=0, lr=1e-3
