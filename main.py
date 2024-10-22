@@ -48,8 +48,8 @@ def time_it(f):
 MODELS = {
     "vgg11_bn": vgg11_bn,
     "resnet18": resnet18,
-    # "resnet34": resnet34,
-    # "vgg13_bn": vgg13_bn,
+    "resnet34": resnet34,
+    "vgg13_bn": vgg13_bn,
 }
 
 WEIGHTS = {
