@@ -34,10 +34,10 @@ transform = transforms.Compose(
     ]
 )
 train_dataset = torchvision.datasets.CIFAR10(
-    root="./data", train=True, download=True, transform=transform
+    root="./data/CIFAR10", train=True, download=True, transform=transform
 )
 test_dataset = torchvision.datasets.CIFAR10(
-    root="./data", train=False, download=True, transform=transform
+    root="./data/CIFAR10", train=False, download=True, transform=transform
 )
 
 train_loader = torch.utils.data.DataLoader(
