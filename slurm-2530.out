@@ -2,3 +2,8 @@ Traceback (most recent call last):
   File "/home/ralmeida/Downloads/csci-3485-lab4/main.py", line 10, in <module>
     from torchsummary import summary
 ModuleNotFoundError: No module named 'torchsummary'
+[main 79afea0] Finish lab4 job
+ 1 file changed, 4 insertions(+)
+ create mode 100644 slurm-2530.out
+To github.com:rafaelolal/csci-3485-lab4.git
+   6a2849f..79afea0  main -> main
