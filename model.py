@@ -10,13 +10,22 @@ from data import get_data_loaders
 
 
 class Model:
-    def __init__(self, model, weights, classes: int) -> None:
+    def __init__(
+        self,
+        model,
+        weights,
+        classes: int,
+        batch_size: int = 32,
+        data_size: int = -1,
+    ) -> None:
         self.model = None
         self.train_loader = None
         self.test_loader = None
 
         self.weights = weights
         self.classes = classes
+        self.batch_size = batch_size
+        self.data_size = data_size
         self.set_model_and_data(model)
 
     def set_model_and_data(self, model) -> None:
@@ -40,10 +49,10 @@ class Model:
         else:
             raise ValueError("Model architecture not supported")
 
-        # get data loaders with correct transformations
-        # TODO: change batch size
         self.train_loader, self.test_loader = get_data_loaders(
-            transforms=[self.weights.transforms()], batch_size=32
+            transforms=[self.weights.transforms()],
+            batch_size=self.batch_size,
+            size=self.data_size,
         )
 
     def train(
@@ -76,7 +85,6 @@ class Model:
 
                 # avoids error:
                 # RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
-                x = x.requires_grad_(True)
 
                 optimizer.zero_grad()
                 outputs = self.model(x)

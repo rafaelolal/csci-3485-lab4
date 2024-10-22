@@ -2,36 +2,48 @@
 Manages the data for the experiments.
 """
 
-from torch import Tensor, tensor
-from torch.utils.data import DataLoader, Dataset
+from torch import Tensor
+from torch.utils.data import DataLoader, Dataset, Subset
 from torchvision.datasets import CIFAR10
+from torchvision.transforms import Compose
 
 
 class CIFAR10Dataset(Dataset):
-    def __init__(self, root: str, train: bool = True, transform=None) -> None:
-        dataset = CIFAR10(
-            root=root, train=train, download=True, transform=transform
+    def __init__(
+        self,
+        root: str,
+        train: bool = True,
+        transform: list = [],
+        size: int = -1,
+    ) -> None:
+        self.dataset = CIFAR10(
+            root=root, train=train, download=True, transform=Compose(transform)
         )
-        # TODO: remove below limits, only for testing
-        self.data = tensor(dataset.data).permute(0, 3, 1, 2).float() / 255.0
-        self.labels = tensor(dataset.targets)
+
+        if size != -1:
+            indices = range(300)
+            self.dataset = Subset(self.dataset, indices)
 
     def __getitem__(self, i) -> tuple[Tensor, Tensor]:
-        image = self.data[i]
-        label = self.labels[i].clone().detach()
+        image, label = self.dataset[i]
         return image, label
 
     def __len__(self) -> int:
-        return len(self.data)
+        return len(self.dataset)
 
 
 def get_data_loaders(
     root: str = "./data/CIFAR10",
     transforms: list = [],
     batch_size: int = 32,
+    size: int = -1,
 ) -> tuple[DataLoader]:
-    test_dataset = CIFAR10Dataset(root=root, train=False, transform=transforms)
-    train_dataset = CIFAR10Dataset(root=root, train=True, transform=transforms)
+    test_dataset = CIFAR10Dataset(
+        root=root, train=False, transform=transforms, size=size
+    )
+    train_dataset = CIFAR10Dataset(
+        root=root, train=True, transform=transforms, size=size
+    )
 
     train_loader = DataLoader(
         train_dataset, batch_size=batch_size, shuffle=True
