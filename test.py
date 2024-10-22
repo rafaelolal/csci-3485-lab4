@@ -91,5 +91,5 @@ with torch.no_grad():
         number_samples += test_labels_set.size(0)
     append_to_file(
         "results.txt",
-        f"Overall accuracy {(number_corrects / number_samples)*100}%",
+        f"test overall accuracy {(number_corrects / number_samples)*100}%",
     )

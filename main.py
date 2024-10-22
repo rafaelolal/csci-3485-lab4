@@ -5,7 +5,7 @@ Defines the experiments to be run.
 from datetime import datetime
 from time import time
 
-from torch import cuda
+from torch import cuda, save
 from torch.backends import mps
 from torchsummary import summary
 from torchvision.models import (
@@ -19,7 +19,7 @@ from torchvision.models import (
     vgg13,
 )
 
-from data import append_to_file
+from data import append_to_file, classify_images
 from model import Model
 
 if cuda.is_available():
@@ -67,11 +67,14 @@ for name in MODELS:
         WEIGHTS[name].IMAGENET1K_V1,
         classes=10,
         batch_size=32,
-        data_size=-1,
+        data_size=100,
     )
     training_time, info = time_it(model.train)(
         device=device, max_epochs=5, min_delta=0, lr=1e-3
     )
+
+    # save(model.model, f"./models/{name}.pth")
+
     accuracy = model.test(device=device)
 
     file_name = "results.txt"
@@ -81,3 +84,10 @@ for name in MODELS:
     append_to_file(file_name, f"time: {training_time}")
     append_to_file(file_name, f"info: {info}")
     append_to_file(file_name, f"accuracy: {accuracy}")
+
+    classify_images(
+        model.model,
+        WEIGHTS[name].IMAGENET1K_V1.transforms(),
+        device,
+        "./images",
+    )
