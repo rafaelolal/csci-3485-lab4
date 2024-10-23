@@ -46,8 +46,8 @@ def time_it(f):
 
 
 MODELS = {
-    "resnet18": resnet18,
-    "resnet34": resnet34,
+    # "resnet18": resnet18,
+    # "resnet34": resnet34,
     "vgg11": vgg11,
     "vgg13": vgg13,
 }
