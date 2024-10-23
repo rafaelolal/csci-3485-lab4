@@ -7,7 +7,8 @@ from time import time
 
 from torch import cuda, save
 from torch.backends import mps
-from torchsummary import summary
+
+# from torchsummary import summary
 from torchvision.models import (
     ResNet18_Weights,
     ResNet34_Weights,
