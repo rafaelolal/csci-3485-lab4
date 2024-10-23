@@ -20,3 +20,8 @@ Files already downloaded and verified
 my name vgg13
 Files already downloaded and verified
 Files already downloaded and verified
+[main 1f39f0d] Finish lab4 job
+ 2 files changed, 106 insertions(+)
+ create mode 100644 slurm-2575.out
+To github.com:rafaelolal/csci-3485-lab4.git
+   7f3d47e..1f39f0d  main -> main

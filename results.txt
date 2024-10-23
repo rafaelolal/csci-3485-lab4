@@ -82,3 +82,15 @@ accuracy: 0.8095999956130981
 ./images/frog2.png frog
 ./images/horse1.jpg horse
 ./images/horse2.jpg deer
+2024-10-23 04:36:15.118286
+vgg13
+param count: (128991818, 40970)
+time: 3913.2998764514923
+info: {'epochs': 20}
+accuracy: 0.816100001335144
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg horse
+./images/horse2.jpg deer
