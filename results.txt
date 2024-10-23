@@ -23,3 +23,27 @@ accuracy: 0.788100004196167
 ./images/frog2.png frog
 ./images/horse1.jpg frog
 ./images/horse2.jpg deer
+2024-10-22 20:27:49.863985
+vgg11
+param count: (128807306, 40970)
+time: 819.6115510463715
+info: {'epochs': 5}
+accuracy: 0.8211999535560608
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg deer
+./images/horse2.jpg deer
+2024-10-22 20:44:58.454554
+vgg13
+param count: (128991818, 40970)
+time: 976.4540545940399
+info: {'epochs': 5}
+accuracy: 0.8030999898910522
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg horse
+./images/horse2.jpg deer

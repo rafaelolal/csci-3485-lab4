@@ -31,3 +31,8 @@ Traceback (most recent call last):
   File "/home/ralmeida/Downloads/csci-3485-lab4/env/lib/python3.12/site-packages/torch/hub.py", line 663, in download_url_to_file
     f.close()
 OSError: [Errno 122] Disk quota exceeded
+[main 54c8b2c] Finish lab4 job
+ 3 files changed, 40 insertions(+), 2 deletions(-)
+ create mode 100644 slurm-2559.out
+To github.com:rafaelolal/csci-3485-lab4.git
+   3b1fa92..54c8b2c  main -> main
