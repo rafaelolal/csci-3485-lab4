@@ -1,1 +1,25 @@
 
+2024-10-22 19:52:25.517854
+resnet18
+param count: (11181642, 5130)
+time: 620.7665531635284
+info: {'epochs': 5}
+accuracy: 0.7723999619483948
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg dog
+./images/frog2.png frog
+./images/horse1.jpg bird
+./images/horse2.jpg dog
+2024-10-22 20:04:32.211364
+resnet34
+param count: (21289802, 5130)
+time: 700.8537006378174
+info: {'epochs': 5}
+accuracy: 0.788100004196167
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg frog
+./images/horse2.jpg deer
