@@ -46,8 +46,8 @@ def time_it(f):
 
 
 MODELS = {
-    # "resnet18": resnet18,
-    # "resnet34": resnet34,
+    "resnet18": resnet18,
+    "resnet34": resnet34,
     "vgg11": vgg11,
     "vgg13": vgg13,
 }
@@ -70,7 +70,7 @@ for name in MODELS:
         data_size=-1,
     )
     training_time, info = time_it(model.train)(
-        device=device, max_epochs=5, min_delta=0, lr=1e-3
+        device=device, max_epochs=20, min_delta=0, lr=1e-3
     )
 
     # save(model.model, f"./models/{name}.pth")

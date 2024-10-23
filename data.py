@@ -59,6 +59,10 @@ def get_data_loaders(
 
 
 def append_to_file(filename: str, data: any) -> None:
+    """
+    Appends data to a file.
+    """
+
     with open(filename, "a") as file:
         file.write(str(data) + "\n")
 
@@ -67,6 +71,7 @@ def classify_images(model, transforms, device, path: str):
     """
     Classifies images in a directory using a trained model.
     """
+
     classes = [
         "airplane",
         "automobile",

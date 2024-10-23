@@ -1,5 +1,5 @@
 """
-Defines the experiments to be run.
+Defines a helper Model class to manage the setup, training, and testing of all models.
 """
 
 import torch.nn as nn
