@@ -1,0 +1,96 @@
+2024-10-23 01:39:17.575158
+resnet18
+param count: (11181642, 5130)
+time: 1676.1732590198517
+info: {'epochs': 20}
+accuracy: 0.7754999995231628
+./images/airplane1.jpg airplane
+./images/airplane2.jpg bird
+./images/frog1.jpg dog
+./images/frog2.png frog
+./images/horse1.jpg dog
+./images/horse2.jpg dog
+2024-10-23 01:48:44.402250
+resnet18
+param count: (11181642, 5130)
+time: 2463.477460384369
+info: {'epochs': 20}
+accuracy: 0.7803999781608582
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg dog
+./images/frog2.png frog
+./images/horse1.jpg bird
+./images/horse2.jpg dog
+2024-10-23 02:11:04.829492
+resnet34
+param count: (21289802, 5130)
+time: 1888.465404510498
+info: {'epochs': 20}
+accuracy: 0.7942000031471252
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg cat
+./images/horse2.jpg deer
+2024-10-23 02:35:33.347687
+resnet34
+param count: (21289802, 5130)
+time: 2783.066746711731
+info: {'epochs': 20}
+accuracy: 0.7924999594688416
+./images/airplane1.jpg airplane
+./images/airplane2.jpg dog
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg cat
+./images/horse2.jpg deer
+2024-10-23 02:47:59.492131
+vgg11
+param count: (128807306, 40970)
+time: 2187.143010377884
+info: {'epochs': 20}
+accuracy: 0.8181999921798706
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg horse
+./images/horse2.jpg horse
+2024-10-23 03:30:32.289312
+vgg11
+param count: (128807306, 40970)
+time: 3268.783072948456
+info: {'epochs': 20}
+accuracy: 0.8185999989509583
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg deer
+./images/horse2.jpg horse
+2024-10-23 03:31:52.714842
+vgg13
+param count: (128991818, 40970)
+time: 2603.8836920261383
+info: {'epochs': 20}
+accuracy: 0.8095999956130981
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg horse
+./images/horse2.jpg deer
+2024-10-23 04:36:15.118286
+vgg13
+param count: (128991818, 40970)
+time: 3913.2998764514923
+info: {'epochs': 20}
+accuracy: 0.816100001335144
+./images/airplane1.jpg airplane
+./images/airplane2.jpg airplane
+./images/frog1.jpg frog
+./images/frog2.png frog
+./images/horse1.jpg horse
+./images/horse2.jpg deer
